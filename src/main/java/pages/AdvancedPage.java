@@ -13,7 +13,7 @@ public class AdvancedPage {
     WebElement moreOptions;
 
     @FindBy(id = "toggle_mode")
-    WebElement toggleGrad;
+    WebElement toggleRadDeg;
 
     @FindBy(id = "fun_sin")
     WebElement sinus;
@@ -29,9 +29,9 @@ public class AdvancedPage {
         PageFactory.initElements(driver, this);
     }
 
-    public void toggle() {
-        System.out.println("Switching to degrees...");
-        toggleGrad.click();
+    public void switchRadDeg() {
+        System.out.println("Switching between radians and degrees...");
+        toggleRadDeg.click();
     }
 
     public void clickSinus() {
@@ -39,8 +39,8 @@ public class AdvancedPage {
         sinus.click();
     }
 
-    public MainPage closeAdvancedTab() {
-        System.out.println("Closing 'Advanced' tab...");
+    public MainPage closeOperatorsTab() {
+        System.out.println("Closing Operators tab...");
         utils.swipe(LEFT_ADVANCED, RIGHT_ADVANCED, DELAY);
         return new MainPage(driver);
     }

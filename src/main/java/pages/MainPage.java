@@ -100,8 +100,8 @@ public class MainPage {
         return new MoreOptionsPopUpPage(driver);
     }
 
-    public AdvancedPage openOperators() {
-        System.out.println("Opening 'Advanced' tab...");
+    public AdvancedPage openOperatorsTab() {
+        System.out.println("Opening Operators tab...");
         pad_operators.click();
         return new AdvancedPage(driver);
     }
